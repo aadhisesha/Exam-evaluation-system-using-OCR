@@ -35,84 +35,96 @@ The system extracts answers from images/PDFs and compares them with a **provided
        }).then(puter.print);
    </script>
 
-4. The model compares:
-     Student answer
-     Provided answer key
-     Defined rubrics (accuracy, keywords, completeness, clarity)
+4. **The model compares :**
+- Student answer
+- Provided answer key
+-  Defined rubrics (accuracy, keywords, completeness, clarity)
 
 A structured score + feedback is returned
 Results displayed on React frontend
 
-🧰 Tech Stack
-Frontend
+---
 
-React (JavaScript)
+## 🧰 Tech Stack
 
-Pages for Tamil & English evaluation
+### Frontend
+- React (JavaScript)
+- Pages for Tamil & English evaluation
+- File upload UI + Results display
 
-File upload UI + Results display
+### Backend
+- Python
+- EasyOCR for Tamil
+- Puter OCR for English
+- GPT-5 Nano API for evaluation logic
 
-Backend
+### AI/OCR
 
-Python
+| Task              | Technology        |
+|-------------------|-------------------|
+| Tamil OCR         | EasyOCR           |
+| English OCR       | Puter OCR         |
+| Answer Evaluation | GPT-5 Nano (Puter.ai) |
 
-EasyOCR for Tamil
 
-Puter OCR for English
 
-GPT-5 Nano API for evaluation logic
+### Project Structure
 
-AI/OCR
-Task	Technology
-Tamil OCR	EasyOCR
-English OCR	Puter OCR
-Answer Evaluation	GPT-5 Nano (Puter.ai)
-📂 Project Structure
+```
 Exam-evaluation-system-using-OCR/
 │
 ├── backend/
-│   ├── ocr_service.py          # Tamil OCR, English OCR, evaluation logic
-│   ├── requirements.txt
-│   └── .gitignore
+│ ├── ocr_service.py # Tamil OCR, English OCR, evaluation logic
+│ ├── requirements.txt
+│ └── .gitignore
 │
 ├── frontend/
-│   ├── src/
-│   │   ├── App.js
-│   │   ├── Home.js
-│   │   ├── EnglishPage.js
-│   │   ├── TamilPage.js
-│   │   └── index.js
-│   ├── package.json
-│   └── .gitignore
+│ ├── src/
+│ │ ├── App.js
+│ │ ├── Home.js
+│ │ ├── EnglishPage.js
+│ │ ├── TamilPage.js
+│ │ └── index.js
+│ ├── package.json
+│ └── .gitignore
 │
 └── README.md
-
-⚙️ Setup Instructions
-1️⃣ Clone the Repository
-git clone https://github.com/aadhisesha/Exam-evaluation-system-using-OCR.git
-cd Exam-evaluation-system-using-OCR
-
-🐍 Backend Setup (Python)
-cd backend
-pip install -r requirements.txt
-python ocr_service.py
+```
 
 
-Backend default URL:
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```git clone https://github.com/aadhisesha/Exam-evaluation-system-using-OCR.git```
+
+```cd Exam-evaluation-system-using-OCR```
+
+### 🐍 Backend Setup (Python)
+`cd backend`
+
+`pip install -r requirements.txt`
+
+`python ocr_service.py`
+
+
+### Backend default URL:
 
 http://localhost:5000
 
-🌐 Frontend Setup (React)
-cd ../frontend
-npm install
-npm start
+### 🌐 Frontend Setup (React)
+`cd ../frontend`
+
+`npm install`
+
+`npm start`
 
 
-Frontend URL:
+### Frontend URL:
 
 http://localhost:3000
 
-📘 Example Use Case
+
+### 📘 Example Use Case
 
 Upload an answer sheet (single or multi-page)
 
@@ -128,20 +140,16 @@ System returns:
 
 Final score
 
-Strengths
+Justification for the marks provided
 
-Weak points
+### 🌟 Future Improvements
 
-Suggestions
+- Add login system for teachers/students
 
-🌟 Future Improvements
+- Add MCQ + other question types
 
-Add login system for teachers/students
+- PDF report generation
 
-Add MCQ + other question types
+- Store results in a database
 
-PDF report generation
-
-Store results in a database
-
-Improve rubric-based scoring accuracy
+- Improve rubric-based scoring accuracy
