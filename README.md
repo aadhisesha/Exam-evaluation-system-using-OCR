@@ -1,23 +1,23 @@
-# ✍️ Exam Evaluation System using OCR (Tamil & English)
+# Exam Evaluation System using OCR (Tamil & English)
 
 A simple full-stack project that evaluates **single-page and multi-page handwritten exam answers** using OCR and AI.  
 The system extracts answers from images/PDFs and compares them with a **provided answer key + rubrics** to generate an evaluation score.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 📝 Supports **single and multi-page** exam answer evaluation  
-- 🔤 **Tamil OCR** using **EasyOCR**  
+-  Supports **single and multi-page** exam answer evaluation  
+-  **Tamil OCR** using **EasyOCR**  
 - 🇬🇧 **English OCR** using **Puter OCR API**  
-- 🤖 Uses **GPT-5 Nano** (via Puter AI) for automatic evaluation  
-- 🎯 Evaluates based on **answer key + rubrics**  
-- 💻 React frontend + Python backend  
-- ⚡ Real-time OCR extraction & AI-based scoring  
+-  Uses **GPT-5 Nano** (via Puter AI) for automatic evaluation  
+-  Evaluates based on **answer key + rubrics**  
+-  React frontend + Python backend  
+-  Real-time OCR extraction & AI-based scoring  
 
 ---
 
-## 🧠 How Evaluation Works
+##  How Evaluation Works
 
 1. **Image/PDF is uploaded**
 2. Tamil text → extracted using **EasyOCR**  
@@ -45,7 +45,7 @@ Results displayed on React frontend
 
 ---
 
-## 🧰 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - React (JavaScript)
@@ -92,14 +92,14 @@ Exam-evaluation-system-using-OCR/
 ```
 
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 ```git clone https://github.com/aadhisesha/Exam-evaluation-system-using-OCR.git```
 
 ```cd Exam-evaluation-system-using-OCR```
 
-### 🐍 Backend Setup (Python)
+###  Backend Setup (Python)
 `cd backend`
 
 `pip install -r requirements.txt`
@@ -111,7 +111,7 @@ Exam-evaluation-system-using-OCR/
 
 http://localhost:5000
 
-### 🌐 Frontend Setup (React)
+###  Frontend Setup (React)
 `cd ../frontend`
 
 `npm install`
@@ -124,7 +124,7 @@ http://localhost:5000
 http://localhost:3000
 
 
-### 📘 Example Use Case
+###  Example Use Case
 
 Upload an answer sheet (single or multi-page)
 
@@ -142,7 +142,7 @@ Final score
 
 Justification for the marks provided
 
-### 🌟 Future Improvements
+###  Future Improvements
 
 - Add login system for teachers/students
 
